@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project Management Tool</title>
+<style>
+  body{
+    background-color: #9ef8f8;
+  }
+  section{
+    color: rgb(6, 66, 245);
+    border: 1px solid #ff0000;
+  }
+  .create-task{
+    color: #ff12ff;
+  }
+    /* Task Management Section */
+.task-management {
+  margin-top: 50px;
+}
+.task-list {
+  margin-bottom: 30px;
+}
+
+.task-list h3 {
+  margin-bottom: 10px;
+}
+
+.task-list ul {
+  list-style: none;
+  padding: 35px 300px;
+  margin: 0;
+}
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #00ff0d;
+  margin-bottom: 10px;
+  padding: 35px 300px;
+}
+
+.task-list li:hover {
+  background-color: #0affeb;
+}
+.task-info {
+  flex-grow: 1;
+}
+.task-info h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #bb1b9b;
+  padding: 35px 300px;
+}
+.task-due-date, .task-assignee {
+  font-size: 14px;
+  color: #7f34ad;
+  margin-bottom: 5px;
+  padding: 35px 300px;
+}
+.task-actions button {
+  margin-left: 10px;
+}
+
+.create-task form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-task label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.create-task input, .create-task textarea {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #a5469d;
+  padding: 25px 300px;
+}
+.create-task textarea {
+  height: 100px;
+}
+.create-task input[type="submit"] {
+  padding: 10px;
+  background-color: #fbff00;
+  color: #ff00b3;
+  border: none;
+  cursor: pointer;
+  
+.create-task input[type="submit"]:hover {
+  background-color: #0f3cf0;
+  padding: 25px 300px;
+}
+</style>
+<!-- Task Management Section -->
+<section class="task-management">
+    <h2>Task Management</h2>
+    <div class="task-list">
+      <h3>My Tasks</h3>
+      <ul>
+        <li>
+          <div class="task-info">
+            <h4>Design user interface</h4>
+            <p class="task-due-date">Due on: June 1, 2023</p>
+            <p class="task-assignee">Assigned to: John</p>
+          </div>
+          <div class="task-actions">
+            <button class="btn btn-primary">Start Task</button>
+            <button class="btn btn-secondary">Mark Complete</button>
+          </div>
+        </li>
+        <!-- Additional task items... -->
+      </ul>
+    </div>
+    <div class="task-list">
+      <h3>Assigned Tasks</h3>
+      <ul>
+        <li>
+          <div class="task-info">
+            <h4>Develop user authentication system</h4>
+            <p class="task-due-date">Due on: June 15, 2023</p>
+            <p class="task-assignee">Assigned by: Alex</p>
+          </div>
+          <div class="task-actions">
+            <button class="btn btn-primary">Accept Task</button>
+            <button class="btn btn-secondary">Decline Task</button>
+          </div>
+        </li>
+        <!-- Additional task items... -->
+      </ul>
+    </div>
+    <div class="create-task">
+      <h3>Create New Task</h3>
+      <form action="#" method="post">
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" name="taskName">
+        <br>
+        <label for="assignedTo">Assign To:</label>
+        <select id="assignedTo" name="assignedTo">
+          <option value="John">John</option>
+          <option value="Sarah">Sarah</option>
+          <option value="Alex">Alex</option>
+          <option value="Mary">Mary</option>
+        </select><br>
+        <label for="dueDate">Due Date:</label>
+        <input type="date" id="dueDate" name="dueDate">
+        <br>
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description"></textarea><br>
+        <input type="submit" value="Create Task">
+      </form>
+    </div>
+  </section>
+</body>
+</html>
